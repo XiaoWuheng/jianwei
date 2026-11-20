@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="490" viewBox="0 0 1600 490" fill="none">
+ <defs>
+  <radialGradient id="space" cx="0" cy="0" r="1" gradientTransform="translate(1230 260) rotate(160) scale(1050 690)" gradientUnits="userSpaceOnUse"><stop stop-color="#14354D"/><stop offset=".62" stop-color="#0A1524"/><stop offset="1" stop-color="#050A12"/></radialGradient>
+  <linearGradient id="ice" x1="1030" y1="50" x2="1390" y2="440"><stop stop-color="#C8F8FF"/><stop offset=".45" stop-color="#5EAFCB"/><stop offset="1" stop-color="#315874"/></linearGradient>
+  <linearGradient id="trail" x1="900" y1="330" x2="1510" y2="150"><stop stop-color="#D6F5FA" stop-opacity="0"/><stop offset=".5" stop-color="#D6F5FA" stop-opacity=".8"/><stop offset="1" stop-color="#779CCD" stop-opacity="0"/></linearGradient>
+  <radialGradient id="halo"><stop offset=".65" stop-color="#09101B"/><stop offset=".70" stop-color="#8FC5D8" stop-opacity=".45"/><stop offset=".75" stop-color="#1B4761" stop-opacity=".24"/><stop offset="1" stop-color="#0A1524" stop-opacity="0"/></radialGradient>
+ </defs>
+ <rect width="1600" height="490" rx="18" fill="url(#space)"/>
+ <path d="M2 36V2H36M1564 2H1598V36M1598 454V488H1564M36 488H2V454" stroke="#7699B2" stroke-opacity=".42"/>
+ <g transform="translate(95 93)" stroke="#B4EEF4" stroke-width="1.8"><ellipse rx="14" ry="28" transform="rotate(45)"/><ellipse rx="14" ry="28" transform="rotate(-45)"/><circle r="3" fill="#E7D3A9" stroke="none"/></g>
+ <text x="147" y="105" fill="#BBD0DF" font-size="22" letter-spacing="6" font-family="Arial,sans-serif">JIANWEI</text>
+ <text x="68" y="252" fill="#EDF4FC" font-size="118" font-weight="300" letter-spacing="12" font-family="MiSans,Microsoft YaHei,Noto Sans CJK SC,sans-serif">见微</text>
+ <text x="71" y="329" fill="#E8D5AF" font-size="34" font-weight="400" font-family="MiSans,Microsoft YaHei,Noto Sans CJK SC,sans-serif">从一句想法，走到可以动手。</text>
+ <text x="73" y="388" fill="#90ADBF" font-size="22" font-family="MiSans,Microsoft YaHei,Noto Sans CJK SC,sans-serif">表达想法　 /　 探索方向　 /　 查证资料　 /　 开始行动</text>
+ <g opacity=".6" fill="#A2D8EC"><circle cx="880" cy="74" r="1.4"/><circle cx="1461" cy="92" r="1.8"/><circle cx="1028" cy="144" r="1"/><circle cx="1386" cy="396" r="1.7"/><circle cx="906" cy="406" r="1"/><circle cx="1525" cy="256" r="1.2"/><circle cx="1127" cy="35" r="1"/><circle cx="1226" cy="445" r="1"/></g>
+ <g transform="translate(1233 252)">
+  <circle r="209" fill="url(#halo)"/>
+  <ellipse rx="273" ry="66" transform="rotate(-19)" stroke="#436681" stroke-opacity=".5"/>
+  <ellipse rx="252" ry="58" transform="rotate(-19)" stroke="#93C9D9" stroke-opacity=".23" stroke-width="7"/>
+  <circle r="139" fill="#040912" stroke="url(#ice)" stroke-opacity=".64" stroke-width="1.5"/>
+  <path d="M-253 63C-204 130 114 41 261-63" stroke="url(#trail)" stroke-width="6" stroke-opacity=".64"/>
+  <path d="M-254 65C-190 136 126 43 267-63" stroke="url(#trail)" stroke-width="1.1"/>
+  <ellipse rx="313" ry="104" transform="rotate(39)" stroke="#7EA7C5" stroke-opacity=".16"/>
+  <circle cx="-245" cy="72" r="3" fill="#E8D5AE"/>
+ </g>
+</svg>

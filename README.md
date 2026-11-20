@@ -1,32 +1,50 @@
-# 见微 · Jianwei
+<div align="center">
 
-见微是一个本地运行的个人思考与研究工具。写下一句还没想清楚的话，沿着感兴趣的方向继续聊，查找能回溯的资料，再把想法整理成可以动手的计划。
+<img src="docs/media/banner.svg" alt="见微 Jianwei — 从一句想法，走到可以动手" width="100%" />
 
-[快速开始](#快速开始) · [完整演示](https://github.com/XiaoWuheng/jianwei/releases/latest) · [MIT 许可证](LICENSE)
+### 把还没想清楚的话，展开成方向、依据和下一步。
 
-[![见微首页，左侧是想法输入区，右侧是实时绘制的星盘](docs/media/home.webp)](https://github.com/XiaoWuheng/jianwei/releases/latest)
+本地运行的创意与研究助手。对话、联网研究、行动计划和长期记忆，围绕同一个想法展开。
 
-<details>
-<summary>观看操作预览</summary>
+[简体中文](README.md) · [English](README.en.md)
 
-![见微开场、表达想法、查看方向、追溯来源与展开行动计划](docs/media/preview.gif)
+[![MIT License](https://img.shields.io/badge/license-MIT-CBDCEC?style=flat-square)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-24%2B-91B6A1?style=flat-square&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-React-83AAC8?style=flat-square&logo=typescript&logoColor=white)](src/)
+[![SQLite](https://img.shields.io/badge/storage-local_SQLite-A6B4C7?style=flat-square&logo=sqlite&logoColor=white)](#数据与模型)
 
-</details>
+[**观看产品介绍**](https://github.com/XiaoWuheng/jianwei/releases/latest) · [快速开始](#快速开始) · [如何使用](#从一句话到一个小尝试) · [参与开发](#参与开发)
 
-## 一个想法，四个视角
+</div>
 
-| 视角 | 可以做什么 |
-| --- | --- |
-| **继续聊** | 用自己的话补全目标、限制和疑问。原话、笔记和推演历史都能回看。 |
-| **看方向** | 比较不同可能，查看各自的假设和适合先试的小实验。 |
-| **联网研究** | 查找对标、案例、市场与开源参照。按出处回看公开来源，分清已有证据、推断和待验证的问题。 |
-| **行动计划** | 按阶段列出任务、产出与验收标准，勾选进度，导出 Markdown 执行说明。 |
+![见微的实际开场、想法输入、方向展开、来源回溯与行动计划](docs/media/preview.gif)
 
-「我的想法」支持搜索、组合推演和带出处的长期摘要；「全部资料」汇集研究记录和收藏的来源。首次启动时数据库为空，演示中的内容仅用于展示操作流程。
+## 从一句话，到一个小尝试
+
+> “我想让独居时的晚饭更有仪式感。也许能和朋友一起玩，但我还不知道怎么做。”
+
+把这句话留下来，沿着感兴趣的方向继续聊。见微会整理你已经表达的内容、提出可探索的分支，再通过真实研究和任务拆分，把下一步写清楚。想法可以成为内容、体验、服务、研究，也可以成为产品。
+
+| 继续聊 | 看方向 | 联网研究 | 行动计划 |
+| :--- | :--- | :--- | :--- |
+| 用自己的话补全目标和限制，回看原话与历史版本。 | 比较可能的做法、假设和适合先做的小实验。 | 查对标、案例、代码和公开资料，保留原始出处。 | 列出阶段、任务、成果和验收标准，导出执行说明。 |
+
+<table>
+<tr>
+<td width="50%"><img src="docs/media/directions.webp" alt="同一想法的多个方向与选中方向的小实验" /><b>先展开可能</b><br/>点击具体方向，查看它的价值、假设与小实验。</td>
+<td width="50%"><img src="docs/media/research.webp" alt="研究来源及可打开原文的局部摘录" /><b>让依据可追溯</b><br/>从研究结论回到来源，区分证据、推断和待验证问题。</td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/media/plan.webp" alt="阶段节点与包含做法、产出、验收的任务" /><b>给出能做的下一步</b><br/>逐项推进任务，把 Markdown 执行说明交给合作者。</td>
+<td width="50%"><img src="docs/media/memory.webp" alt="我的想法中的保存记录与长期摘要入口" /><b>以后接着想</b><br/>回看、搜索、组合旧想法，按周期整理带出处的摘要。</td>
+</tr>
+</table>
+
+*以上为实际运行的演示案例。全新安装的想法库为空。*
 
 ## 快速开始
 
-准备 [Node.js 24 或更新版本](https://nodejs.org/) 和 npm。在准备存放见微的目录里打开终端：
+准备 [Node.js 24+](https://nodejs.org/)、Git，以及已安装并登录的 [Codex CLI](https://github.com/openai/codex#quickstart)。先用 `codex login status` 确认账号可用。
 
 ```sh
 git clone https://github.com/XiaoWuheng/jianwei.git
@@ -36,31 +54,38 @@ npm run build
 npm start
 ```
 
-打开 [127.0.0.1:4317](http://127.0.0.1:4317)。Windows 上完成构建后也可以双击 `打开见微.vbs`，用 Chrome 或 Edge 直接全屏进入，按 F11 切换窗口显示。
+打开 **[http://127.0.0.1:4317](http://127.0.0.1:4317)**，写下想法，点击「帮我想一想」。
 
-### 连接思考和研究引擎
+Windows 完成构建后，也可双击 `打开见微.vbs`，使用 Chrome 或 Edge 全屏进入，按 F11 切换。Windows 引擎检测使用原生 `codex.exe`，可通过 Codex 官方独立安装程序安装。若引擎没有被找到，设置环境变量 `JIANWEI_CODEX_PATH` 指向可执行文件，再启动见微。
 
-安装并登录 [Codex CLI](https://github.com/openai/codex#quickstart)，在终端用 `codex login status` 确认登录。Windows 推荐使用官方独立安装程序，让见微可以找到原生 `codex.exe`。安装后重新启动见微，打开「设置 → 思维与研究引擎」再检测连接。
+## 数据与模型
 
-如果可执行文件不在 `PATH`，启动前把 `JIANWEI_CODEX_PATH` 设为 Codex 原生可执行文件的绝对路径。见微沿用本机 Codex 的账号和配置，推演、联网研究和摘要需要网络及服务额度。
+- 想法、原话、笔记、研究和任务进度保存在本机 `data/jianwei.sqlite`，支持完整 JSON 备份与导入。
+- 推演、联网研究和摘要通过本机 Codex 配置对应的模型服务处理，需要网络与相应服务额度。相关输入和上下文会发给该服务。
+- 检索围绕具体任务追踪中英文公开来源。报告说明实际覆盖，登录、付费和不可索引内容可能无法取得。
+- 原话持续保留。摘要支持手动整理或在服务运行时按周期检查；可回溯出处、校准理解。
+- 服务默认只监听 `127.0.0.1`。浏览器支持时可进行语音输入。
 
-### 数据在哪里
-
-见微只在本机回环地址上监听。想法、研究、记忆和任务等记录默认写入 `data/jianwei.sqlite`，可在设置里导出或导入完整 JSON 备份。发送给模型的任务输入和相关上下文会交给当前 Codex 配置对应的服务处理。语音输入由支持该功能的浏览器提供。
-
-## 开发
+## 参与开发
 
 ```sh
-npm run dev     # 打开 http://127.0.0.1:4317
-npm test        # 本地测试，无需 Codex 登录
+npm run dev    # 本地开发
+npm test       # 核心测试，无需模型服务
 ```
 
-界面在 `src/`，本地 HTTP 服务、Codex 调用和 SQLite 存储在 `server/`。服务启动前可设置 `JIANWEI_PORT` 和 `JIANWEI_DATA_DIR`，改变监听端口和数据目录。
+| 目录 | 内容 |
+| :--- | :--- |
+| `src/` | React / TypeScript 界面、空间交互与 Three.js 场景 |
+| `server/` | 本地 HTTP 服务、Codex 调用、SQLite、推演与研究流程 |
+| `scripts/` | Windows 启动和可选资源安装 |
+| `tests/` | 核心数据、任务、记忆和来源验证 |
 
-欢迎在 [Issues](https://github.com/XiaoWuheng/jianwei/issues) 反馈问题和讨论改进，或提交 PR。报告界面问题时，请附上复现步骤和窗口尺寸。分享截图或日志前请遮住自己的对话和账号信息。
+可设置 `JIANWEI_PORT`、`JIANWEI_DATA_DIR` 调整端口和数据目录。
 
-## 许可证
+欢迎提交 [Issue](https://github.com/XiaoWuheng/jianwei/issues) 或 PR。界面问题请附窗口尺寸和复现步骤，模型问题请说明使用的提供方及可公开的错误信息。提交前运行 `npm test` 与 `npm run build`。
 
-见微原创代码使用 [MIT](LICENSE) 许可证。依赖和字体按各自许可证分发，详见 [第三方声明](THIRD_PARTY_NOTICES.md)。
+## 许可证与致谢
 
-宣讲片配乐为 Scott Buckley 的 [《Discovery》](https://www.scottbuckley.com.au/library/discovery/)，采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)。片中使用剪辑片段并与旁白混音。发布页附可复制的署名。
+原创代码采用 [MIT](LICENSE)。React、Three.js、Lucide 和字体按各自许可证使用，详见 [第三方声明](THIRD_PARTY_NOTICES.md)。
+
+产品介绍配乐为 Scott Buckley 的 [《Discovery》](https://www.scottbuckley.com.au/library/discovery/)，采用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)，片中节选并与旁白混音。完整署名随视频提供。
