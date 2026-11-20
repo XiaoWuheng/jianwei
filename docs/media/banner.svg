@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="490" viewBox="0 0 1600 490" fill="none">
  <defs>
   <radialGradient id="space" cx="0" cy="0" r="1" gradientTransform="translate(1230 260) rotate(160) scale(1050 690)" gradientUnits="userSpaceOnUse"><stop stop-color="#14354D"/><stop offset=".62" stop-color="#0A1524"/><stop offset="1" stop-color="#050A12"/></radialGradient>
-  <linearGradient id="ice" x1="1030" y1="50" x2="1390" y2="440"><stop stop-color="#C8F8FF"/><stop offset=".45" stop-color="#5EAFCB"/><stop offset="1" stop-color="#315874"/></linearGradient>
-  <linearGradient id="trail" x1="900" y1="330" x2="1510" y2="150"><stop stop-color="#D6F5FA" stop-opacity="0"/><stop offset=".5" stop-color="#D6F5FA" stop-opacity=".8"/><stop offset="1" stop-color="#779CCD" stop-opacity="0"/></linearGradient>
+  <linearGradient id="ice" x1="-130" y1="-150" x2="130" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#C8F8FF"/><stop offset=".45" stop-color="#5EAFCB"/><stop offset="1" stop-color="#315874"/></linearGradient>
+  <linearGradient id="trail" x1="-270" y1="70" x2="270" y2="-70" gradientUnits="userSpaceOnUse"><stop stop-color="#D6F5FA" stop-opacity="0"/><stop offset=".5" stop-color="#D6F5FA" stop-opacity=".8"/><stop offset="1" stop-color="#779CCD" stop-opacity="0"/></linearGradient>
   <radialGradient id="halo"><stop offset=".65" stop-color="#09101B"/><stop offset=".70" stop-color="#8FC5D8" stop-opacity=".45"/><stop offset=".75" stop-color="#1B4761" stop-opacity=".24"/><stop offset="1" stop-color="#0A1524" stop-opacity="0"/></radialGradient>
  </defs>
  <rect width="1600" height="490" rx="18" fill="url(#space)"/>
