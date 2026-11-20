@@ -1,0 +1,40 @@
+export type Kind = 'fact'|'inference'|'hypothesis';
+export type Source = { id:string; title:string; url:string; publisher:string; type:string; excerpt:string; reliability:string };
+export type Insight = {title:string;body:string;kind:Kind;sourceIds:string[]};
+export type Report = {
+  title:string; subtitle:string; summary:string; problem:string; audience:string; valueProposition:string; recommendation:string; nextAction:string;
+  insights:Insight[];
+  competitors:{name:string;url:string;tagline:string;audience:string;pricing:string;strengths:string[];gaps:string[];learnFrom:string;sourceIds:string[]}[];
+  benchmarks:{name:string;url:string;positioning:string;userJourney:string[];features:string[];monetization:string;learn:string[];avoid:string[];sourceIds:string[]}[];
+  market:{overview:string;signals:Insight[];entryPoint:string;risks:string[]};
+  repositories:{name:string;url:string;description:string;license:string;stack:string[];application:string;caution:string;sourceIds:string[]}[];
+  roadmap:{phase:string;title:string;duration:string;goal:string;tasks:string[];deliverable:string;successCriteria:string}[];
+  assumptions:{assumption:string;test:string;passCriteria:string;priority:string}[];
+  sources:Source[];
+  coverage:{channel:string;queries:string[];result:string;status:string}[];
+  limitations:string[];
+};
+export type Project = {
+  thoughtId?:string;
+  id:string;title:string;idea:string;reference:string;constraints:string;mode:string;depth:string;region:string;
+  status:'researching'|'complete'|'failed'|'interrupted';report:Report|null;createdAt:string;updatedAt:string;completedAt?:string;
+  notes:string;tasks:Record<string,boolean>;savedSourceIds:string[];archived:boolean;searchCount:number;error:string;
+  events:{id:string;type:string;message:string;at:string}[];
+  messages:{id:string;role:string;content:string;at:string;sources?:{title:string;url:string}[]}[];
+  chatPending?:boolean;chatError?:string;
+};
+export type Preferences = {name:string;depth:string;region:string;memoryAuto?:boolean;memoryDays?:number};
+export type Health = {available:boolean;engine:string;label:string;detail:string};
+export type Direction={id:string;title:string;description:string;value:string;firstExperiment:string;assumptions:string[]};
+export type Ideation={
+ title:string;reply:string;understanding:string;intentType:string;maturity:'explore'|'focus'|'ready';
+ clarity:{dimension:string;status:'confirmed'|'assumed'|'unknown';description:string}[];
+ directions:Direction[];questions:{id:string;question:string;reason:string;options:string[]}[];
+ connections:{id:string;kind:'thought'|'project';reason:string;possibility:string}[];researchQuestions:string[];
+ workingBrief:{purpose:string;audience:string;outcome:string;constraints:string;scope:string[];notDoing:string[];successCriteria:string[];assumptions:string[]};nextStep:string;
+};
+export type BlueprintTask={id:string;title:string;instruction:string;output:string;acceptance:string;dependsOn:string[]};
+export type Blueprint={title:string;form:string;vision:string;audience:string;problem:string;value:string;scope:string[];excluded:string[];journey:string[];deliverables:{id:string;title:string;format:string;description:string;acceptance:string}[];milestones:{id:string;title:string;goal:string;duration:string;tasks:BlueprintTask[]}[];resources:{name:string;purpose:string;estimate:string}[];risks:{risk:string;validation:string;passCriteria:string}[];openQuestions:string[];evidence:{claim:string;kind:Kind;sourceIds:string[]}[];nextAction:string;limitations:string[]};
+export type Thought={isExample?:boolean;id:string;title:string;rawIdea:string;reference:string;constraints:string;createdAt:string;updatedAt:string;contentAt:string;messages:{id:string;role:string;content:string;at:string}[];analysis:Ideation|null;blueprint:Blueprint|null;blueprintAt:string|null;blueprintEvidence:'researched'|'unverified';pending:boolean;jobKind:'ideation'|'blueprint'|'queued'|null;error:string;events:{message:string;at:string}[];focusId:string;projectId:string|null;tasks:Record<string,boolean>;notes:string;archived:boolean;seedIds:string[];versions:{at:string;analysis:Ideation}[];blueprintVersions:{at:string;blueprint:Blueprint;tasks:Record<string,boolean>;evidence:string}[]};
+export type Memory={id:string;title:string;summary:string;createdAt:string;sourceIds:string[];batchIds:string[];sourceRevisions:Record<string,string>;automatic:boolean;themes:{title:string;insight:string;sourceIds:string[]}[];decisions:{decision:string;context:string;sourceIds:string[]}[];unresolved:{question:string;nextStep:string;sourceIds:string[]}[];connections:{idea:string;reason:string;sourceIds:string[]}[];limitations:string[]};
+export type MemoryState={corrections?:string;pending:boolean;error:string;lastAttempt:string;latest:Memory|null;count:number;preferences:{memoryAuto:boolean;memoryDays:number}};

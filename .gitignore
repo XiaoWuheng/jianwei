@@ -1,0 +1,14 @@
+node_modules/
+dist/
+data/
+output/
+playwright-report/
+test-results/
+*.sqlite*
+*.db*
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+*.log
+.sites-runtime/
+.env*
