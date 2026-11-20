@@ -8,7 +8,7 @@ A local creative research workspace built around the idea you're exploring.
 
 [简体中文](README.md) · [English](README.en.md)
 
-[Watch the product overview](https://github.com/XiaoWuheng/jianwei/releases/latest) · [Get started](#get-started) · [License](LICENSE)
+[Watch the product overview](https://github.com/XiaoWuheng/jianwei/releases/download/v3.0.0/jianwei-product-overview-zh-en.mp4) · [Get started](#get-started) · [License](LICENSE)
 
 </div>
 
