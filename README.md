@@ -13,7 +13,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-React-83AAC8?style=flat-square&logo=typescript&logoColor=white)](src/)
 [![SQLite](https://img.shields.io/badge/storage-local_SQLite-A6B4C7?style=flat-square&logo=sqlite&logoColor=white)](#数据与模型)
 
-[**观看产品介绍**](https://github.com/XiaoWuheng/jianwei/releases/latest) · [快速开始](#快速开始) · [如何使用](#从一句话到一个小尝试) · [参与开发](#参与开发)
+[**观看产品介绍**](https://github.com/XiaoWuheng/jianwei/releases/download/v3.0.0/jianwei-product-overview-zh-en.mp4) · [快速开始](#快速开始) · [如何使用](#从一句话到一个小尝试) · [参与开发](#参与开发)
 
 </div>
 
